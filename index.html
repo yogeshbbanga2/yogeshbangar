@@ -48,7 +48,7 @@
           <li><a href="#about"><i class="bi bi-person navicon"></i> About</a></li>
           <li><a href="#skills"><i class="bi bi-tools navicon"></i> Skills</a></li>
           <li><a href="#resume"><i class="bi bi-file-earmark-text navicon"></i> Resume</a></li>
-          <li><a href="#portfolio"><i class="bi bi-images navicon"></i> Portfolio</a></li>
+          <li><a href="#writing"><i class="bi bi-pencil-square navicon"></i> Writing</a></li>
           <li><a href="#contact"><i class="bi bi-envelope navicon"></i> Contact</a></li>
         </ul>
       </nav>
@@ -80,13 +80,13 @@
 
             <div class="col-lg-6" data-aos="fade-right" data-aos-delay="100">
               <div class="hero-text">
-                <h1>Yogesh<span class="accent-text">Bangar</span></h1>
+                <h1>Yogesh <span class="accent-text">Bangar</span></h1>
                 <h2>Senior DevOps / Platform Engineer</h2>
-                <p class="lead">I'm a <span class="typed" data-typed-items="Senior DevOps Engineer, Platform Engineer, SRE, Cloud Architect, GitOps Specialist"></span></p>
+                <p class="lead">I'm a <span class="typed" data-typed-items="Senior DevOps Engineer, Platform Engineer, SRE, GitOps Specialist"></span></p>
                 <p class="description">6+ years building scalable AWS infrastructure, GitOps pipelines, and Internal Developer Platforms. Passionate about automation, cost optimisation, and developer experience.</p>
 
                 <div class="hero-actions">
-                  <a href="#portfolio" class="btn btn-primary">View My Work</a>
+                  <a href="#writing" class="btn btn-primary">My Writing</a>
                   <a href="#contact" class="btn btn-outline">Get In Touch</a>
                 </div>
 
@@ -512,114 +512,88 @@
 
     </section><!-- /Resume Section -->
 
-    <!-- Portfolio Section -->
-    <section id="portfolio" class="portfolio section">
+    <!-- Writing Section -->
+    <section id="writing" class="services section">
 
       <!-- Section Title -->
       <div class="container section-title" data-aos="fade-up">
-        <h2>Portfolio</h2>
-        <p>A selection of key projects and initiatives I've led — from EKS migrations to platform tooling and security automation. I also regularly write about my work and contributions on <a href="https://medium.com/@yogeshbbangar" target="_blank"><strong>Medium</strong></a>.</p>
+        <h2>Writing</h2>
+        <p>I write about the things I build and the problems I solve at work. All articles are published on <a href="https://medium.com/@yogeshbbangar" target="_blank"><strong>Medium</strong></a>.</p>
       </div><!-- End Section Title -->
 
       <div class="container" data-aos="fade-up" data-aos-delay="100">
 
-        <div class="isotope-layout" data-default-filter="*" data-layout="masonry" data-sort="original-order">
+        <div class="row gy-4 justify-content-center">
 
-          <div class="row">
-            <div class="col-lg-3 filter-sidebar">
-              <div class="filters-wrapper" data-aos="fade-right" data-aos-delay="150">
-                <ul class="portfolio-filters isotope-filters">
-                  <li data-filter="*" class="filter-active">All Projects</li>
-                  <li data-filter=".filter-gitops">GitOps</li>
-                  <li data-filter=".filter-infrastructure">Infrastructure</li>
-                  <li data-filter=".filter-security">Security</li>
-                  <li data-filter=".filter-platform">Platform</li>
-                </ul>
+          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
+            <div class="service-card position-relative">
+              <div class="service-icon">
+                <i class="bi bi-diagram-3"></i>
               </div>
+              <span class="badge bg-primary mb-2">GitOps</span>
+              <h3>Building a Golden Path — Part 1: Kubernetes</h3>
+              <p>How I defined a standardised Helm chart and CI/CD template so developers can ship a production-ready service to EKS without any infrastructure decisions.</p>
+              <a href="https://medium.com/@yogeshbbangar/building-a-golden-path-part-1-kubernetes-cc1631e26cac" target="_blank" class="stretched-link mt-2 d-inline-block">Read on Medium <i class="bi bi-arrow-right"></i></a>
             </div>
+          </div>
 
-            <div class="col-lg-9">
-              <div class="row gy-4 portfolio-container isotope-container" data-aos="fade-up" data-aos-delay="200">
+          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
+            <div class="service-card position-relative">
+              <div class="service-icon">
+                <i class="bi bi-shield-lock"></i>
+              </div>
+              <span class="badge bg-danger mb-2">Security</span>
+              <h3>Securing Web Apps with Envoy Gateway and OIDC</h3>
+              <p>Enforcing OIDC authentication at the gateway layer on Amazon EKS — securing external web applications without touching application code.</p>
+              <a href="https://medium.com/@yogeshbbangar/securing-web-applications-with-envoy-gateway-and-oidc-authentication-5dd0a28b8e29" target="_blank" class="stretched-link mt-2 d-inline-block">Read on Medium <i class="bi bi-arrow-right"></i></a>
+            </div>
+          </div>
 
-                <div class="col-lg-6 col-md-6 portfolio-item isotope-item filter-gitops">
-                  <div class="portfolio-wrap">
-                    <img src="assets/img/portfolio/portfolio-1.webp" class="img-fluid" alt="ECS to EKS Migration" loading="lazy">
-                    <div class="portfolio-info">
-                      <div class="content">
-                        <span class="category">GitOps</span>
-                        <h4>ECS → EKS GitOps Migration</h4>
-                        <p>Migrated 40+ ECS services to AWS EKS using ArgoCD, Helm, Kustomize, and ApplicationSet. Reduced deploy time from 25 to 10 minutes.</p>
-                      </div>
-                    </div>
-                  </div>
-                </div><!-- End Portfolio Item -->
+          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="300">
+            <div class="service-card position-relative">
+              <div class="service-icon">
+                <i class="bi bi-layers"></i>
+              </div>
+              <span class="badge bg-success mb-2">Infrastructure</span>
+              <h3>Refactoring Terraform at Scale</h3>
+              <p>How I restructured a monolithic Terraform state across 100+ AWS accounts — cutting merge conflicts by 70% and improving delivery speed by 40%.</p>
+              <a href="https://medium.com/@yogeshbbangar/refactoring-terraform-at-scale-from-a-monolithic-state-to-a-scalable-architecture-5d5ddf578a7f" target="_blank" class="stretched-link mt-2 d-inline-block">Read on Medium <i class="bi bi-arrow-right"></i></a>
+            </div>
+          </div>
 
-                <div class="col-lg-6 col-md-6 portfolio-item isotope-item filter-platform">
-                  <div class="portfolio-wrap">
-                    <img src="assets/img/portfolio/portfolio-2.webp" class="img-fluid" alt="Golden Path" loading="lazy">
-                    <div class="portfolio-info">
-                      <div class="content">
-                        <span class="category">Platform</span>
-                        <h4>Golden Path for Service Onboarding</h4>
-                        <p>Defined a standardised Helm chart + CI/CD pipeline template — developers ship production-ready services to EKS in under 30 minutes with zero infrastructure decisions.</p>
-                      </div>
-                    </div>
-                  </div>
-                </div><!-- End Portfolio Item -->
+          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
+            <div class="service-card position-relative">
+              <div class="service-icon">
+                <i class="bi bi-eye-slash"></i>
+              </div>
+              <span class="badge bg-danger mb-2">Security</span>
+              <h3>Why GitLab Secret Detection Missed Our Secrets</h3>
+              <p>The limitations of default secret detection tooling and how we fixed it with custom detection rules to prevent credential leaks in CI pipelines.</p>
+              <a href="https://medium.com/@yogeshbbangar/why-gitlab-secret-detection-missed-our-secrets-and-how-we-fixed-it-43251624ec1d" target="_blank" class="stretched-link mt-2 d-inline-block">Read on Medium <i class="bi bi-arrow-right"></i></a>
+            </div>
+          </div>
 
-                <div class="col-lg-6 col-md-6 portfolio-item isotope-item filter-infrastructure">
-                  <div class="portfolio-wrap">
-                    <img src="assets/img/portfolio/portfolio-portrait-1.webp" class="img-fluid" alt="Terraform State Management" loading="lazy">
-                    <div class="portfolio-info">
-                      <div class="content">
-                        <span class="category">Infrastructure</span>
-                        <h4>Terraform State Management at Scale</h4>
-                        <p>Restructured monolithic Terraform state across 100+ AWS accounts — cut merge conflicts by 70% and improved delivery speed by 40%.</p>
-                      </div>
-                    </div>
-                  </div>
-                </div><!-- End Portfolio Item -->
+          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
+            <div class="service-card position-relative">
+              <div class="service-icon">
+                <i class="bi bi-shield-check"></i>
+              </div>
+              <span class="badge bg-danger mb-2">Security</span>
+              <h3>Securing EKS and Automating Compliance with Kubescape</h3>
+              <p>Integrating Kubescape into GitLab CI to automate EKS cluster security scanning and generate compliance reports on every deployment.</p>
+              <a href="https://medium.com/@yogeshbbangar/how-i-secured-our-eks-cluster-and-automated-compliance-reports-using-kubescape-adca57dbab7c" target="_blank" class="stretched-link mt-2 d-inline-block">Read on Medium <i class="bi bi-arrow-right"></i></a>
+            </div>
+          </div>
 
-                <div class="col-lg-6 col-md-6 portfolio-item isotope-item filter-security">
-                  <div class="portfolio-wrap">
-                    <img src="assets/img/portfolio/portfolio-portrait-2.webp" class="img-fluid" alt="Envoy Gateway OIDC" loading="lazy">
-                    <div class="portfolio-info">
-                      <div class="content">
-                        <span class="category">Security</span>
-                        <h4>Envoy Gateway with OIDC on EKS</h4>
-                        <p>Secured external web applications by enforcing OIDC authentication at the gateway layer — no application code changes required.</p>
-                      </div>
-                    </div>
-                  </div>
-                </div><!-- End Portfolio Item -->
-
-                <div class="col-lg-6 col-md-6 portfolio-item isotope-item filter-infrastructure">
-                  <div class="portfolio-wrap">
-                    <img src="assets/img/portfolio/portfolio-5.webp" class="img-fluid" alt="AWS Cost Optimisation" loading="lazy">
-                    <div class="portfolio-info">
-                      <div class="content">
-                        <span class="category">Infrastructure</span>
-                        <h4>AWS Cost Optimisation (45% Savings)</h4>
-                        <p>Built a Boto3 rightsizing script for 40+ ECS services — analysed CPU/memory usage and right-sized instances, delivering 45% AWS cost reduction.</p>
-                      </div>
-                    </div>
-                  </div>
-                </div><!-- End Portfolio Item -->
-
-                <div class="col-lg-6 col-md-6 portfolio-item isotope-item filter-gitops">
-                  <div class="portfolio-wrap">
-                    <img src="assets/img/portfolio/portfolio-6.webp" class="img-fluid" alt="ArgoCD with Okta OIDC" loading="lazy">
-                    <div class="portfolio-info">
-                      <div class="content">
-                        <span class="category">GitOps</span>
-                        <h4>ArgoCD with Okta OIDC &amp; Custom Domain</h4>
-                        <p>Deployed and configured ArgoCD on EKS with Okta OIDC SSO authentication, exposed via Ingress on a custom domain with full RBAC integration.</p>
-                      </div>
-                    </div>
-                  </div>
-                </div><!-- End Portfolio Item -->
-
-              </div><!-- End Portfolio Container -->
+          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="300">
+            <div class="service-card position-relative">
+              <div class="service-icon">
+                <i class="bi bi-filetype-yml"></i>
+              </div>
+              <span class="badge bg-warning text-dark mb-2">Helm</span>
+              <h3>Unlocking the Power of helper.tpl in Helm Charts</h3>
+              <p>A real-world walkthrough of using helper.tpl to manage growing complexity in Helm chart deployments — keeping templates clean and reusable.</p>
+              <a href="https://medium.com/@yogeshbbangar/unlocking-the-power-of-helper-tpl-in-helm-charts-a-real-world-example-757050227581" target="_blank" class="stretched-link mt-2 d-inline-block">Read on Medium <i class="bi bi-arrow-right"></i></a>
             </div>
           </div>
 
@@ -627,7 +601,7 @@
 
       </div>
 
-    </section><!-- /Portfolio Section -->
+    </section><!-- /Writing Section -->
 
     <!-- Contact Section -->
     <section id="contact" class="contact section">
