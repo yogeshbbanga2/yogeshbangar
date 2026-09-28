@@ -2548,3 +2548,221 @@ section,
 .starter-section {
   /* Add your styles here */
 }
+
+/*--------------------------------------------------------------
+# Equal-height Writing / Service Cards
+--------------------------------------------------------------*/
+.services .row.gy-4 {
+  align-items: stretch;
+}
+
+.services .col-lg-4,
+.services .col-md-6 {
+  display: flex;
+}
+
+.services .service-card {
+  display: flex !important;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 100%;
+  height: 100%;
+}
+
+.services .service-card h3,
+.services .service-card p {
+  width: 100%;
+}
+
+.services .service-card p {
+  flex: 1;
+}
+
+.services .service-card .stretched-link {
+  margin-top: auto !important;
+}
+
+/*--------------------------------------------------------------
+# Top Navigation Override
+# Converts the left sidebar into a fixed horizontal top bar
+--------------------------------------------------------------*/
+
+.header {
+  position: fixed;
+  top: 0;
+  left: 0 !important;
+  right: 0;
+  bottom: auto !important;
+  width: 100% !important;
+  height: 65px;
+  overflow: hidden;
+  flex-direction: row;
+  align-items: center;
+  padding: 0;
+  background-color: var(--background-color);
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.3);
+  transition: height 0.3s ease-in-out;
+}
+
+.header.header-show {
+  height: auto;
+}
+
+.header .header-container {
+  display: flex !important;
+  flex-direction: row !important;
+  align-items: center;
+  flex-wrap: wrap;
+  width: 100%;
+  min-height: 65px;
+  flex-shrink: 0;
+  border-radius: 0;
+  border: none !important;
+  background: transparent !important;
+  padding: 0 24px;
+}
+
+.header-brand {
+  font-family: var(--heading-font);
+  font-weight: 700;
+  font-size: 18px;
+  color: #ffffff !important;
+  text-decoration: none;
+  white-space: nowrap;
+  margin-right: 24px;
+  flex-shrink: 0;
+  letter-spacing: 0.3px;
+  opacity: 1 !important;
+}
+
+.header-brand:hover {
+  color: #ffffff !important;
+  opacity: 0.85 !important;
+}
+
+/* Desktop (xl+): horizontal nav bar */
+@media (min-width: 1200px) {
+  .header .header-toggle {
+    display: none !important;
+  }
+
+  .header .navmenu {
+    display: flex !important;
+    flex: 1;
+    width: auto;
+    z-index: auto;
+    padding: 0;
+  }
+
+  .header .navmenu ul {
+    display: flex !important;
+    flex-direction: row;
+    padding: 0;
+    margin: 0;
+    align-items: center;
+  }
+
+  .header .navmenu a,
+  .header .navmenu a:focus {
+    padding: 0 14px;
+    font-size: 15px;
+    width: auto;
+    line-height: 65px;
+  }
+
+  .header .navmenu a .navicon,
+  .header .navmenu a:focus .navicon {
+    font-size: 15px;
+    margin-right: 4px;
+  }
+
+  .header .social-links {
+    display: flex !important;
+    flex-direction: row;
+    align-items: center;
+    margin: 0 0 0 12px;
+  }
+
+  .header ~ main,
+  .header ~ #footer {
+    margin-left: 0 !important;
+    padding-top: 65px;
+  }
+}
+
+/* Mobile (< xl): collapsible dropdown from top bar */
+@media (max-width: 1199px) {
+  .header {
+    height: 60px;
+  }
+
+  .header.header-show {
+    height: auto;
+    overflow: visible;
+  }
+
+  .header .header-container {
+    min-height: 60px;
+    padding: 0 15px;
+  }
+
+  .header-brand {
+    flex: 1;
+  }
+
+  .header .navmenu {
+    display: none;
+    flex-basis: 100%;
+    order: 10;
+    z-index: auto;
+    width: 100%;
+  }
+
+  .header.header-show .navmenu {
+    display: block !important;
+  }
+
+  .header .navmenu ul {
+    flex-direction: column;
+    padding-bottom: 10px;
+  }
+
+  .header .social-links {
+    display: none !important;
+    flex-basis: 100%;
+    flex-direction: row;
+    justify-content: center;
+    order: 11;
+    padding: 8px 0 14px;
+    margin: 0;
+  }
+
+  .header.header-show .social-links {
+    display: flex !important;
+  }
+
+  .header .header-toggle {
+    display: flex !important;
+    position: static;
+    background-color: transparent;
+    border: 1px solid rgba(255, 255, 255, 0.35);
+    border-radius: 6px;
+    color: var(--contrast-color);
+    width: 38px;
+    height: 38px;
+    top: auto;
+    right: auto;
+    margin-left: 0;
+  }
+
+  .header .header-toggle:hover {
+    background-color: var(--accent-color);
+    border-color: var(--accent-color);
+  }
+
+  .header ~ main,
+  .header ~ #footer {
+    margin-left: 0 !important;
+    padding-top: 60px;
+  }
+}
